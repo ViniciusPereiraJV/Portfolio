@@ -1,0 +1,12 @@
+[
+    {
+        "title":"Weather Time",
+        "imageSrc":"Projects/weather.png",
+        "description":"Project developed to research weather forecasts around the world, showing time, humidity, temperature and wind speed",
+        "skills":["React", "JavaScript", "node"],
+        "demo":"adress deploy",
+        "source":"github"
+
+    }
+
+]

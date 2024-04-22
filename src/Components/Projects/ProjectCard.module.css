@@ -1,0 +1,119 @@
+.card_container {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   border-radius: 10px;
+   background: linear-gradient(180deg, #2a3c82 0%, #132a53 70%);
+   box-shadow: 0 16px 14px 0 #04152d;
+   padding: 18px 24px;
+   max-width: 40%;
+   height: 400px;
+ }
+ 
+ .card_img {
+   width: 100%; /* Ajustar a largura da imagem para ocupar todo o espaço disponível */
+   border-radius: 10px;
+ }
+ 
+ .card_title {
+   font-size: 1.4em;
+   font-weight: 700;
+   margin-top: 20px; /* Adicionar margem superior para separar o título da imagem */
+ }
+ 
+ .card_description {
+   margin-top: 8px;
+   font-size: .8em;
+   font-weight: 500;
+ }
+ 
+ .card_skills {
+   margin-top: 14px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 6px;
+   list-style: none;
+ }
+ 
+ .card_skill {
+   font-size: .8em;
+   font-weight: 600;
+   border-radius: 100px;
+   background: rgb(36, 12, 92);
+   padding: .4em 1.2em;
+   text-transform: uppercase;
+ }
+ 
+ .card_links {
+   margin-top: 22px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+ }
+ 
+ .card_link {
+   text-align: center;
+   width: 100%;
+   text-decoration: none;
+   color: #ffff;
+   font-size: .8em;
+   font-weight: 600;
+   border-radius: 100px;
+   background: rgb(17, 1, 54);
+   padding: .5em 1.5em;
+   transition: .3s ease-in-out;
+ }
+ 
+ .card_link:hover {
+   letter-spacing: 2px;
+   background-color: #576cbc;
+ }
+ @media screen and (max-width: 968px) {
+   .card_container {
+     max-width: 60%; 
+  
+
+   }
+ 
+   .card_img {
+     height: auto;
+     font-size: 2em;
+   }
+ 
+   .card_title {
+     font-size: 1.5em;
+   }
+ 
+   .card_skills {
+     margin-top: 10px;
+   }
+ }
+ 
+ @media screen and (max-width: 768px) {
+   .card_container {
+     max-width: 60%;
+     font-size: 1em;
+   }
+ 
+   .card_img {
+     height: auto;
+   }
+ 
+   .card_title, .card_description, .card_skill,.card_links {
+     font-size: 1em;
+   }
+   .card_links{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   }
+   .card_link{
+      width: 70%;
+   }
+ 
+   .card_skills {
+     margin-top: 10px; 
+   }
+ }
+ 

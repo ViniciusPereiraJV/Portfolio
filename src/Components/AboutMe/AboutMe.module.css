@@ -1,0 +1,131 @@
+.aboutme_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin-top: 10em;
+    width: 100%;
+}
+
+.aboutme_content {
+    
+    max-width: 800px; /* Defina a largura máxima para evitar que o conteúdo se estenda demais em telas grandes */
+}
+
+.title_aboutme {
+    font-size: 1.7em;
+    border-bottom: 3px solid lightgreen;
+    margin: .8em;
+    padding: .2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.description_aboutme {
+    line-height: 1.5em;
+    border-radius: 10px;
+    font-size: 1.5em; 
+    font-weight: 500;
+    text-align: center;
+}
+
+.skills_container {
+    margin-right: 1em;
+    width: 100%;
+    max-width: 800px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title_skills {
+    font-size: 2.5em;
+    border-bottom: 3px solid lightgreen;
+    margin: .5em;
+    padding: .2em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.skills_content {
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.skills_content li {
+    list-style: none;
+}
+
+.skills_content img {
+    padding: 10px;
+    width: 130px; /* Reduzir o tamanho das imagens para melhor ajuste em telas menores */
+    height: 130px;
+    transition: .3s ease-in-out;
+}
+
+.skills_content img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    border-radius: 10px;
+    background-color: rgba(253, 250, 247, 0.527);
+}
+@media screen and (max-width: 1600px) {
+    .aboutme_content {
+    
+        width: 90%; 
+       
+    }
+    
+    .description_aboutme {
+        font-size: 1.2em;
+    }
+    
+    .skills_container {
+        width: 90%; 
+    }
+    
+    .skills_content img {
+        width: 90px; 
+        height: 90px;
+    }
+}
+
+/* Mídia para ajustar estilos para telas menores */
+@media screen and (max-width: 768px) {
+    .aboutme_container {
+        margin-top: 0;
+        flex-direction: column;
+    }
+    .title_skills,
+     .title_aboutme{
+        font-size: 1em;
+    }
+    
+    .aboutme_content {
+    
+        margin-top: 0;
+        width: 90%; 
+       
+    }
+    
+    .description_aboutme {
+        font-size: .6em; 
+    }
+    
+    .skills_container {
+        width: 90%; 
+    }
+    
+    .skills_content img {
+        width: 50px; 
+        height: 50px;
+    }
+}

@@ -1,0 +1,287 @@
+.container_hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin: 2em;
+    padding: 2.5em;
+    max-width: 100%;
+}
+
+
+.container_hero::before {
+    position: absolute;
+    content: "";
+    width: 25rem;
+    height: 25rem;
+    border-radius: 25rem;
+    background-color: #67a02180;
+    z-index: -2;
+    filter: blur(210px);
+}
+
+.container_hero::before {
+    bottom: 14rem;
+    right: 5rem;
+}
+
+.home_info_hero {
+    margin-left: 2.5em;
+}
+.home_info_hero h2{
+    font-size: 2.4em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.home_info_hero h3,
+span {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.5em;
+    
+}
+.home_info_hero span {
+    position: relative;
+    color: #83e509;
+    border-radius: 10px;
+    font-size: 1em;
+}
+.home_info_hero span::before {
+    content: "Web Developer";
+    animation: words 20s infinite;
+}
+.home_info_hero span::after {
+    content: "";
+    position: absolute;
+    background-color: #071203;
+    width: calc(100% + 8px);
+    height: 105%;
+    border-left: 3px solid black;
+    right: -8px;
+    animation: cursor 0.7s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 2px solid #FFF;
+    }
+}
+@keyframes words {
+    0%,20%{
+        content: "Frontend Developer";
+    }
+    21%,40%{
+        content: "Web Developer";
+    }
+    41%,60%{
+        content: "Devops";
+    }
+    61%,80%{
+        content: "Software Enginner";
+    }
+    81%,100%{
+        content: "QA Enginner";
+    }
+}
+@keyframes typing {
+   10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+    width: 0;
+   }
+   5%,20%,25%,40%,45%,60%,65%,80%,85%{
+    width: calc(100% + 8px);
+   }
+}
+
+.home_info_hero p {
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+.card_profile {
+    position: relative;
+}
+
+.card_profile img {
+    margin-top: 2em;
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+   animation-name: floating;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes floating{
+    0%{
+        transform: translate(0, 0px);
+    }
+    50%{
+        transform: translate(0, 10px);
+    }
+    100%{
+        transform: translate(0, -0px);
+    }
+}
+
+.card_profile .profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 5px #2843086d;
+}
+
+.social_medias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.social_medias ul {
+    display: flex;
+    gap: 3em;
+    list-style: none;
+}
+
+.social_medias a {
+    color: #ffffffa1;
+    transition: all .3s ease-in-out;
+}
+
+.facebook:hover {
+    color: #4765a6;
+    transform: scale(0.4);
+}
+
+.linkedin:hover {
+    color: #0e76a8;
+}
+
+.instagram:hover {
+    color: #dd2a7b;
+
+}
+.github:hover {
+    color: #272424;
+}
+
+@media (max-width: 1600px) {
+    .container_hero {
+        font-size: .9em;
+        justify-content: space-between;
+    }
+    .home_info_hero {
+        right: 50px;
+    }
+
+    .home_info_hero h3,
+    span {
+        font-size: 3em;
+        line-height: 1.4em;
+    }
+
+    .home_info_hero p {
+        font-size: 1.2em;
+    }
+
+    .card_profile img {
+        margin-right: 20px;
+        width: 300px;
+        height: 300px;
+    }
+    .container_hero::before {
+        position: absolute;
+        content: "";
+        width: 15rem;
+        height: 15rem;
+        border-radius: 15rem;
+        background-color: #67a02180;
+        z-index: -2;
+        filter: blur(200px);
+    }
+}
+
+@media (max-width: 1025px) {
+    .container_hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home_info_hero h3,
+    span {
+        font-size: 3em;
+        line-height: 1.4em;
+    }
+
+    .home_info_hero p {
+        font-size: 1.2em;
+    }
+
+    .card_profile img {
+        width: 300px;
+        height: 300px;
+    }
+    .container_hero::before {
+        bottom: 1rem;
+        right: 25rem;
+    }
+}
+
+@media (max-width: 938px) {
+    .container_hero {
+        margin-right: 0;
+    }
+    .home_info_hero{
+        padding-top: 4em;
+    }
+
+    .home_info_hero h3, h2, span {
+        font-size: 2.1em;
+    }
+    ul li a svg{
+        width: 70%;
+        }
+        .card_profile{
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    .card_profile img {
+        margin: 0;
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 608px) {
+    .container_hero {
+        padding: 1em;
+        
+    }
+  
+    ul li a svg{
+    width: 70%;
+    }
+    a svg {
+          width: 40px;
+        }
+     
+
+    .home_info_hero h3,h2,span {
+        font-size: .9em;
+    }
+
+    .home_info_hero p {
+        font-size: 1em;
+    }
+
+    .card_profile img {
+        width: 200px;
+        height: 200px;
+    }
+}

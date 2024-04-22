@@ -1,0 +1,43 @@
+.project_container {
+    margin-top: 10em;
+    color: #ffff;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .project_title {
+    padding-top: 5em;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+  
+  .project_content {
+    margin-top: 37px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .project_container {
+      margin-top: 10em; 
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .project_title {
+      font-size: 28px; 
+    }
+  
+    .project_content {
+        width: 100%;
+      gap: 15px; 
+    }
+  }
+  
