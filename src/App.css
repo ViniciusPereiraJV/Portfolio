@@ -9,7 +9,6 @@
   width: 0;
 }
 html{
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 section{

@@ -8,7 +8,6 @@ export const Form = ({ contactRef }) => {
   const [name, setName] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
   const form = useRef();
@@ -24,7 +23,6 @@ export const Form = ({ contactRef }) => {
       from_name: name,
       to_email: emailAddress,
       phone_number: phoneNumber,
-      email_subject: subject,
       message: message
     };
 
@@ -35,7 +33,6 @@ export const Form = ({ contactRef }) => {
           setName("");
           setEmailAddress("");
           setPhoneNumber("");
-          setSubject("");
           setMessage("");
         },
         (error) => {
@@ -55,7 +52,7 @@ export const Form = ({ contactRef }) => {
           </div>
           <div className={styles.whatsapp}>
             <FaWhatsapp size={60} />
-            <p><a href="https://wa.link/x268hy" target='_blank'>+351 969 935 342:</a></p>
+            <p><a href="https://wa.link/x268hy" target='_blank'>+351 969 935 342</a></p>
           </div>
         </div>
         <form ref={form} onSubmit={sendEmail} className={styles.contact_form} action='#'>
@@ -65,9 +62,9 @@ export const Form = ({ contactRef }) => {
           </div>
           <div className={styles.contact_input_box}>
             <input type='text' placeholder='Phone Number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-            <input type='text' placeholder='Email Subject' value={subject} onChange={(e) => setSubject(e.target.value)} />
+           
           </div>
-          <textarea name='' cols='30' rows='10' placeholder='Your Message' value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+          <textarea name='' cols='20' rows='8' placeholder='Your Message' value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
           <input className={styles.contact_btn} type='submit' value='Send Message' />
         </form>
       </div>

@@ -8,7 +8,7 @@ function Hero({heroRef}) {
 
     const textVariants = {
         initial:{
-            x: -500,
+            x: -200,
             opacity: 0,
         },
         animate:{
@@ -23,7 +23,7 @@ function Hero({heroRef}) {
 
     return(
         <section id="hero" ref={heroRef} className={styles.container_hero}>
-            <motion.div variants={textVariants} initial="initial"  whileInView="animate" className={styles.home_info_hero}>
+            <motion.div variants={textVariants} initial="initial"  animate="animate" className={styles.home_info_hero}>
                 <motion.h2 whileInView="animate" variants={textVariants}>João Vinicius</motion.h2>
                 <motion.h3 whileInView="animate" variants={textVariants}> I´m a <motion.span whileInView="animate" variants={textVariants}></motion.span></motion.h3>
                 <motion.p whileInView="animate" variants={textVariants}>Passionate about technology and transforming ideas into solutions</motion.p>

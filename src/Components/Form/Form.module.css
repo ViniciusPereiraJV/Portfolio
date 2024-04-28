@@ -1,167 +1,162 @@
 .contact_container {
-    max-width: 70%;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact_content {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .contact_content {
-      flex-direction: column;
-    }
-    .contact_info{
-        font-size: 1em;
-        border-bottom: 1px solid lightgray;
-        border-right: none;
-    }
-  }
+  max-width: 70%;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_content {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.contact_info {
+  border-right: 1px solid lightgray;
+  padding-right: 40px;
+  height: auto; 
+}
+
+.contact_info p {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.whatsapp {
+  margin: 40px 10px;
+}
+
+.email,
+.whatsapp {
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; 
+  text-align: center;
+  transition: .3s ease-in-out;
+}
+
+.email a,
+.whatsapp a {
+  text-decoration: none;
+  color: #fff;
+  transition: .3s ease-in-out;
+}
+
+.email:hover,
+.whatsapp:hover {
+  color: #006EC5; /* Corrigir a cor do hover */
+}
+
+.contact_title {
+  font-size: 3em;
+  text-transform: uppercase;
+  margin-top: 2em;
+  padding: .5em;
+}
+
+.contact_title::after {
+  content: " ME";
+  color: #1a4c2d;
+}
+
+.contact_input_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.contact_input_box input,
+.contact_container textarea {
+  width: 100%;
+  padding: .7rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: .8rem;
+  margin: .6rem 0;
+  background-color: #1a4c2d;
+}
+
+.contact_container textarea {
+  resize: none;
+}
+
+.contact_btn {
+  background-color: #32a55e;
  
-  
-  
-  .contact_info {
-    border-right: 1px solid lightgray;
-    padding-right: 90px;
-    height: 25em;
-  }
-  
-  .contact_info p {
-    font-size: 1.6em;
-    font-weight: 500;
-  }
-  
-  .whatsapp {
-    margin: 40px 10px;
-  }
-  
-  .email,
-  .whatsapp {
-    font-size: 1.2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-    transition: .3s ease-in-out;
-  }
-  
-  .email a,
-  .whatsapp a {
-    text-decoration: none;
-    color: #fff;
-    transition: .3s ease-in-out;
-  }
-  
-  .email:hover {
-    color: #006EC5;
-  }
-  
-  .whatsapp:hover {
-    color: #128c7e;
-  }
-  
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding: .4em 1.2em;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  background-color: #83e509;
+  transition: .2s ease-in-out;
+  font-family: "prompt";
+  font-weight: 500;
+  border: none;
+}
+
+.contact_btn:hover {
+  letter-spacing: 1px;
+  background-color: #071203;
+  border: 1px solid ghostwhite;
+  color: #fff;
+}
+
+/* Media Queries para Responsividade */
+
+@media screen and (max-width: 1308px) {
   .contact_title {
-    font-size: 4em;
-    text-transform: uppercase;
-    margin-top: 3em;
-    padding: .5em;
+    margin-top: 1em;
+    font-size: 3em;
   }
-  @media screen and (max-width: 768px) {
-    .contact_title {
-        font-size: 3em; /* Reduzir o tamanho da fonte em dispositivos menores */
-      }
+
+  .contact_container {
+      max-width: 70%;
+      margin: auto;
+      text-align: center;
+      padding-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
   }
-  @media screen and (max-width: 468px) {
-    .contact_title {
-        font-size: 2em; /* Reduzir o tamanho da fonte em dispositivos menores */
-      }
-      .email,
-      .whatsapp {
-        font-size: .8em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin:1em 0;
-        margin-left: 3em;
-       
-      }
-      .contact_content{
-        text-align: center;
-      }
-      .contact_info{
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid lightgray;
-      }
+
+  .contact_content {
+      justify-content: space-evenly;
+      align-items: center;
+      display: flex;
+      gap: 20px;
   }
-  
-  .contact_title::after {
-    content: "ME";
-    color: #1a4c2d;
+}
+
+@media screen and (max-width: 600px) {
+  .contact_content {
+      flex-direction: column-reverse;
+      margin-top: 2em;
   }
-  
-  .contact_input_box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    color: #fff;
+
+  .contact_info {
+      font-size: 0.8em;
+      border-bottom: 1px solid lightgray;
+      border-right: none;
+      padding-right: 0;
+      height: auto; 
+  }
+
+  .contact_title {
+    margin-top: 2em;
+    font-size: 1.8em;
+  }
+  .email, .whatsapp {
+    font-size: .8em;
+  }
+  .email svg, .whatsapp svg{
+    width: 30px;
   }
   
-  .contact_input_box input,
-  .contact_container textarea {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: .8rem;
-    margin: .7rem 0;
-    background-color: #1a4c2d;
-  }
-  
-  .contact_container textarea {
-    resize: none;
-  }
-  
-  .contact_input_box input {
-    width: 100%;
-  }
-  
-  @media screen and (min-width: 768px) {
-    .contact_input_box input {
-      width: 48%;
-    }
-  }
-  
-  .contact_btn {
-    background-color: #32a55e;
-    margin-top: 1.5rem;
-    cursor: pointer;
-    position: relative;
-    text-align: center;
-    padding: .5em 1.2em;
-    font-size: 1.5rem;
-    border-radius: 20px;
-    background-color: #83e509;
-    cursor: pointer;
-    transition: .2s ease-in-out;
-    font-family: "prompt";
-    font-weight: 500;
-    border: none;
-  }
-  
-  .contact_btn:hover {
-    letter-spacing: 1px;
-    background-color: #071203;
-    border: 1px solid ghostwhite;
-    color: #fff;
-  }
-  
+}

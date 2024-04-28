@@ -74,13 +74,13 @@ span {
         content: "Web Developer";
     }
     41%,60%{
-        content: "Devops";
+        content: "Student";
     }
     61%,80%{
-        content: "Software Enginner";
+        content: "Creative";
     }
     81%,100%{
-        content: "QA Enginner";
+        content: "Enthusiastic";
     }
 }
 @keyframes typing {
@@ -100,10 +100,14 @@ span {
 
 .card_profile {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .card_profile img {
-    margin-top: 2em;
+    margin-top: 3.5em;
     max-width: 100%;
     height: auto;
     width: 500px;
@@ -138,7 +142,9 @@ span {
     align-items: center;
     margin-top: 5em;
 }
-
+ul li a svg{
+    width: 90%;
+    }
 .social_medias ul {
     display: flex;
     gap: 3em;
@@ -202,86 +208,72 @@ span {
         filter: blur(200px);
     }
 }
-
-@media (max-width: 1025px) {
+@media (max-width: 1300px) {
     .container_hero {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .home_info_hero h3,
-    span {
-        font-size: 3em;
-        line-height: 1.4em;
-    }
-
-    .home_info_hero p {
-        font-size: 1.2em;
-    }
-
-    .card_profile img {
-        width: 300px;
-        height: 300px;
-    }
-    .container_hero::before {
-        bottom: 1rem;
-        right: 25rem;
-    }
-}
-
-@media (max-width: 938px) {
-    .container_hero {
-        margin-right: 0;
-    }
-    .home_info_hero{
-        padding-top: 4em;
-    }
-
-    .home_info_hero h3, h2, span {
-        font-size: 2.1em;
-    }
-    ul li a svg{
-        width: 70%;
-        }
-        .card_profile{
-            margin-top: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-    .card_profile img {
-        margin: 0;
-        width: 220px;
-        height: 220px;
-    }
-}
-
-@media (max-width: 608px) {
-    .container_hero {
-        padding: 1em;
-        
+      font-size: 0.9em;
+      justify-content: space-between;
     }
   
-    ul li a svg{
-    width: 70%;
+    .home_info_hero {
+      right: 50px;
     }
-    a svg {
-          width: 40px;
-        }
-     
-
-    .home_info_hero h3,h2,span {
-        font-size: .9em;
+  
+    .home_info_hero h3,
+    span {
+      font-size: 3em;
+      line-height: 1.4em;
     }
-
+  
     .home_info_hero p {
-        font-size: 1em;
+      font-size: 1.2em;
     }
-
+  
     .card_profile img {
-        width: 200px;
-        height: 200px;
+      margin-right: 20px;
+      width: 300px;
+      height: 300px;
     }
-}
+  
+    .container_hero::before {
+      position: absolute;
+      content: "";
+      width: 15rem;
+      height: 15rem;
+      border-radius: 15rem;
+      background-color: #67a02180;
+      z-index: -2;
+      filter: blur(200px);
+    }
+  }
+  
+  /* Media Query para dispositivos móveis com largura máxima de 600px */
+  @media (max-width: 600px) {
+    .container_hero {
+      padding: 1em;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    .home_info_hero {
+      font-size: 0.5em;
+    }
+  
+    ul li a svg {
+      width: 40px;
+    }
+  
+    .home_info_hero p {
+      font-size: 1em;
+    }
+    .card_profile{
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .card_profile img {
+    margin: 1em 0 ;
+    width: 240px;
+    height: 240px;
+    }
+  }

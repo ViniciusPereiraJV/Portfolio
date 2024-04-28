@@ -20,7 +20,7 @@ function AboutMe({aboutmeRef, skillsRef}) {
 
   const variants = {
     initial: {
-      x: 100,
+      x: 0,
       y: 100,
       opacity: 0,
     },
@@ -29,7 +29,7 @@ function AboutMe({aboutmeRef, skillsRef}) {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.7,
+        duration: .5,
         staggerChildren: 0.1,
       },
     },
@@ -57,9 +57,8 @@ function AboutMe({aboutmeRef, skillsRef}) {
         </div>
         <div className={styles.description_aboutme}>
           <p>
-          Hello! My name is João Vinicius, I'm a Brazilian developer passionate about technology, currently living in Portugal. At 24 years old, I love solving problems and creating innovative solutions through programming. Throughout my journey as a developer, I have developed skills in areas such as web development, object-oriented programming, and algorithmic problem solving. I am constantly looking for ways to improve my technical skills and stay up to date with industry trends and advancements.😁
+          Hello! My name is João Vinicius, I'm a Brazilian developer passionate about technology, currently living in Portugal. I love solving problems and creating innovative solutions through programming. Throughout my journey as a developer, I have developed skills in areas such as web development, object-oriented programming, and algorithmic problem solving.😁
           </p>
-
           <p>I'm excited to be part of a dynamic team and apply my technical and creative skills to create impactful solutions. If you're looking for a dedicated developer eager to learn, I'm ready to make a difference!💻🤓  </p>
         
         </div>
