@@ -39,7 +39,7 @@ function Navbar({heroRef, aboutmeRef, projectsRef, contactRef, skillsRef}) {
         <li><button className={styles.menu}onClick={() => scrollToSection(skillsRef)}>Skills</button></li>
         <li><button className={styles.menu}onClick={() => scrollToSection(projectsRef)}>Projects</button></li>
         <li><button className={styles.menu}onClick={() => scrollToSection(contactRef)}>Contact</button></li>
-       <Button>Let´s meet</Button>
+       <Button contactRef={contactRef}>Let´s meet</Button>
           
       </ul>
       <button className={styles.menu_btn} onClick={toggleMenu}>

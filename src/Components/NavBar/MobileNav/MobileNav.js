@@ -59,7 +59,7 @@ export const MobileNav = ({ isOpen, toggleMenu, heroRef, aboutmeRef, projectsRef
                 Contact
               </button>
             </li>
-            <Button>Let´s Meet</Button>
+            <Button contactRef={contactRef} >Let´s Meet</Button>
           </ul>
         </div>
       </div>
