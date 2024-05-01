@@ -87,12 +87,15 @@
 
 @media screen and (max-width: 768px) {
     .aboutme_container {
-        margin: 0;
+        margin: 1em 0;
         flex-direction: column;
+        gap: 50px;
     }
 
     .title_skills,
     .title_aboutme {
+    
+        margin-top: 3em;
         font-size: 1.2em;
     }
 
@@ -110,7 +113,7 @@
     }
 
     .skills_content img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 }

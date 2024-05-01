@@ -3,6 +3,7 @@ import styles from './Form.module.css';
 import { MdOutlineEmail } from 'react-icons/md';
 import emailjs from '@emailjs/browser';
 import { FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export const Form = ({ contactRef }) => {
   const [name, setName] = useState("");
@@ -41,8 +42,25 @@ export const Form = ({ contactRef }) => {
       );
   };
 
+  const variants = {
+    initial: {
+      x: 0,
+      y: 100,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: .7,
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
   return (
-    <section id='contact' ref={contactRef} className={styles.contact_container}>
+    <motion.section id='contact' ref={contactRef} className={styles.contact_container} variants={variants} initial='initial' whileInView="animate" >
       <h2 className={styles.contact_title}>Contact</h2>
       <div className={styles.contact_content}>
         <div className={styles.contact_info}>
@@ -68,6 +86,6 @@ export const Form = ({ contactRef }) => {
           <input className={styles.contact_btn} type='submit' value='Send Message' />
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 };

@@ -215,12 +215,13 @@ ul li a svg{
     }
   
     .home_info_hero {
+    position: relative;
       right: 50px;
     }
   
     .home_info_hero h3,
     span {
-      font-size: 3em;
+      font-size: 2.5em;
       line-height: 1.4em;
     }
   
@@ -242,12 +243,12 @@ ul li a svg{
       border-radius: 15rem;
       background-color: #67a02180;
       z-index: -2;
-      filter: blur(200px);
+      filter: blur(150px);
     }
   }
   
-  /* Media Query para dispositivos móveis com largura máxima de 600px */
-  @media (max-width: 600px) {
+
+  @media (max-width: 640px) {
     .container_hero {
       padding: 1em;
       align-items: center;
@@ -256,15 +257,32 @@ ul li a svg{
     }
   
     .home_info_hero {
+        bottom: 30px;
+        right: 0;
       font-size: 0.5em;
     }
   
     ul li a svg {
-      width: 40px;
+      width: 50px;
     }
   
     .home_info_hero p {
-      font-size: 1em;
+      font-size: 1.5em;
+    }
+    
+    .container_hero::before {
+        position: absolute;
+        content: "";
+        width: 13rem;
+        height: 13rem;
+        border-radius: 13rem;
+        background-color: #67a02180;
+        z-index: -2;
+        filter: blur(100px);
+      }
+      .container_hero::before {
+        bottom: 8rem;
+        right: 3rem;
     }
     .card_profile{
         justify-content: center;

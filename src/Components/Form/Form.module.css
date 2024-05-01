@@ -88,7 +88,6 @@
 
 .contact_btn {
   background-color: #32a55e;
- 
   cursor: pointer;
   position: relative;
   text-align: center;
@@ -141,7 +140,7 @@
   }
 
   .contact_info {
-      font-size: 0.8em;
+      font-size: 1em;
       border-bottom: 1px solid lightgray;
       border-right: none;
       padding-right: 0;
@@ -157,6 +156,9 @@
   }
   .email svg, .whatsapp svg{
     width: 30px;
+  }
+  .contact_btn {
+    font-size: 1em;
   }
   
 }

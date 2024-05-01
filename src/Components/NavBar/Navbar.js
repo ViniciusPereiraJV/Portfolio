@@ -1,9 +1,18 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './Navbar.module.css';
 import me from '../../assets/images/Me.jpg';
 import { motion } from 'framer-motion';
+import { MobileNav } from './MobileNav/MobileNav';
+import { Button } from '../Button/Button.js';
 
 function Navbar({heroRef, aboutmeRef, projectsRef, contactRef, skillsRef}) {
+
+  const [openMenu, setOpenMenu] = useState(false);
+
+  
+  const toggleMenu = () =>{
+    setOpenMenu(!openMenu);
+  };
 
 
   const scrollToSection = (ref) => {
@@ -12,7 +21,8 @@ function Navbar({heroRef, aboutmeRef, projectsRef, contactRef, skillsRef}) {
     }
   };
 
-  return (
+  return (<>
+    <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} heroRef={heroRef} aboutmeRef={aboutmeRef} projectsRef={projectsRef} contactRef={contactRef} skillsRef={skillsRef}/>
     <nav className={styles.navbar_container}>
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
@@ -24,17 +34,19 @@ function Navbar({heroRef, aboutmeRef, projectsRef, contactRef, skillsRef}) {
         <h3>João Vinicius</h3>
       </motion.div>
       <ul className={styles.navbar_content}>
-        {/* Use onClick para chamar a função scrollToSection com a ref correspondente */}
         <li><button className={styles.menu} onClick={() => scrollToSection(heroRef)}>Home</button></li>
         <li><button className={styles.menu}onClick={() => scrollToSection(aboutmeRef)}>About Me</button></li>
         <li><button className={styles.menu}onClick={() => scrollToSection(skillsRef)}>Skills</button></li>
         <li><button className={styles.menu}onClick={() => scrollToSection(projectsRef)}>Projects</button></li>
         <li><button className={styles.menu}onClick={() => scrollToSection(contactRef)}>Contact</button></li>
-        <div className={styles.button}>
-          <button className={styles.btn}>Let´s meet</button>
-        </div>
+       <Button>Let´s meet</Button>
+          
       </ul>
+      <button className={styles.menu_btn} onClick={toggleMenu}>
+            <span className={openMenu ? styles.x : styles.hamburguer}></span>
+          </button>
     </nav>
+    </>
   );
 }
 
